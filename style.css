@@ -1,0 +1,26 @@
+body {
+  background-color: green;
+}
+body #rouge, body #bleu {
+  font-family: serif;
+  font-weight: bold;
+  font-size: 100px;
+  color: blue;
+}
+body li {
+  color: yellow;
+}
+body li:hover {
+  background-color: brown;
+}
+body ol:hover {
+  background-color: pink;
+}
+
+a {
+  color: green;
+}
+a:hover {
+  text-decoration: line-through;
+  text-decoration-color: azure;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,31 @@
+$color: yellow;
+body {
+    background-color: green;
+    #rouge {
+        font: {
+            family: serif;
+            weight: bold;
+            size: 100px;
+        }
+        color: blue ;
+}
+    #bleu {
+        @extend #rouge ;
+    }
+    & li {
+        color: $color;
+        &:hover {
+            background-color: brown;
+        }
+    }
+    ol:hover {
+        background-color: pink;
+    }
+}
+a {
+    color: green;
+    &:hover {
+        text-decoration: line-through;
+        text-decoration-color: azure;
+    }
+}

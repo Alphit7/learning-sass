@@ -7,6 +7,9 @@ body #rouge, body #bleu {
   font-size: 100px;
   color: blue;
 }
+body #bleu {
+  color: red;
+}
 body li {
   color: yellow;
 }
@@ -23,4 +26,44 @@ a {
 a:hover {
   text-decoration: line-through;
   text-decoration-color: azure;
+}
+
+.warning {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 300px;
+  position: relative;
+  box-sizing: content-box;
+  margin: 0%;
+}
+.warning p {
+  color: red;
+  background-color: gray;
+  padding: 30px;
+  margin: 0%;
+  opacity: 0, 5%;
+  position: absolute bottom;
+}
+.warning #post {
+  display: none;
+}
+
+.bottom {
+  width: 300px;
+}
+
+.top {
+  position: absolute;
+  width: 300px;
+  opacity: 1;
+}
+
+@keyframes animals {
+  from {
+    display: none;
+  }
+  to {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */

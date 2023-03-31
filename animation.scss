@@ -1,0 +1,136 @@
+.animation {
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  width: 300px;
+  height: 300px;
+  & {
+    #text {
+      transition-property: transform;
+      transition-duration: 1000ms;
+    }
+  }
+  &:hover {
+    #text {
+      transform: translate(0px, -70px);
+    }
+
+    #post {
+      animation-name: opacity;
+      animation-duration: 500ms;
+      animation-delay: 500ms;
+      animation-fill-mode: forwards;
+    }
+
+    #top {
+      filter: blur(1px);
+    }
+  }
+
+  #top {
+    width: 300px;
+    position: relative;
+    border: 2px;
+    margin-left: 1px;
+  }
+
+  #text {
+    background-color: gray;
+    width: 300px;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+    bottom: 250px;
+    border-bottom: 0px;
+  }
+
+  #rien {
+    background-color: gray;
+    width: 300px;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+    position: relative;
+    bottom: 70px;
+    border-top: 0px;
+  }
+
+  #post {
+    position: relative;
+    bottom: 170px;
+    text-align: center;
+    background-color: gray;
+    width: 300px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: 500ms;
+    transition-duration: 500ms;
+    border-bottom: 0px;
+    border-top: 0px;
+  }
+
+  p {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border: 1px solid black;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animation2 { 
+    width: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    text-align: center;
+  #text:hover {
+      transform: translate(0px, -70px);
+  }
+  #text {
+    width: 300px;
+    background-color: gray;
+    margin: 0px;
+    bottom: 290px;
+    position: relative;
+    z-index: 2;
+    transition-property: transform;
+    transition-duration: 1000ms;
+    border: {
+      top: solid black 2px;
+      left: solid black 2px;
+      right: solid black 2px;
+      bottom: 0px;
+    }
+  }
+  #block {
+    background-color: white;
+    width: 300px;
+    border-top: 2px;
+    height: 200px;
+    border: 2px white solid;
+    position: relative;
+    z-index: 3;
+    border-top: 2px solid black;
+    padding:0px;
+  }
+  #top {
+    width: 300px;
+    border: solid black 2px;
+    border-bottom: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 1;
+  }
+}

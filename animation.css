@@ -3,6 +3,7 @@
   flex-direction: column;
   box-sizing: content-box;
   width: 300px;
+  height: 300px;
 }
 .animation #text {
   transition-property: transform;
@@ -12,7 +13,10 @@
   transform: translate(0px, -70px);
 }
 .animation:hover #post {
-  opacity: 1;
+  animation-name: opacity;
+  animation-duration: 500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
 }
 .animation:hover #top {
   filter: blur(1px);
@@ -64,4 +68,57 @@
   padding-top: 70px;
   padding-bottom: 70px;
   border: 1px solid black;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animation2 {
+  width: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  text-align: center;
+}
+.animation2 #text:hover {
+  transform: translate(0px, -70px);
+}
+.animation2 #text {
+  width: 300px;
+  background-color: gray;
+  margin: 0px;
+  bottom: 290px;
+  position: relative;
+  z-index: 2;
+  transition-property: transform;
+  transition-duration: 1000ms;
+  border-top: solid black 2px;
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+  border-bottom: 0px;
+}
+.animation2 #block {
+  background-color: white;
+  width: 300px;
+  border-top: 2px;
+  height: 200px;
+  border: 2px white solid;
+  position: relative;
+  z-index: 3;
+  border-top: 2px solid black;
+  padding: 0px;
+}
+.animation2 #top {
+  width: 300px;
+  border: solid black 2px;
+  border-bottom: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  z-index: 1;
 }/*# sourceMappingURL=animation.css.map */
